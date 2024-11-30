@@ -3,11 +3,39 @@
 <head><script src="/player.15cd3d59.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Spotify</title>
-    <link rel="stylesheet" href="/index.8f8f3900.css">
+    <title>SONIA</title>
+    <link rel="stylesheet" href="/index.f8ece68a.css">
+    <link rel="stylesheet" href="/index.3418909d.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="/ondas-sonoras.f9649166.ico" type="image/x-icon">
 </head>
-<body>
-    
+<body class="tema-claro">
+    <!-- Botón para abrir/cerrar navbar -->
+    <button id="menu-toggle" class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Botón para cambiar tema -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Navbar lateral -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="/img.60bd3c72.jpg" alt="Logo" class="logo">
+            <h2>Mi Música</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#"><i class="fas fa-search"></i> Buscar</a></li>
+            <li><a href="#"><i class="fas fa-heart"></i> Favoritos</a></li>
+            <li><a href="#"><i class="fas fa-list"></i> Playlists</a></li>
+            <li><a href="#"><i class="fas fa-history"></i> Recientes</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+        </ul>
+    </nav>
+
     <!-- Contenido principal -->
     <div class="content-wrapper">
         <div class="primero">
@@ -18,16 +46,26 @@
         </div>
         
         <div class="segundo">
-            <h3>generado por ia</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto laboriosam enim veritatis illo facere necessitatibus nesciunt quo non provident deserunt quia quidem est, aperiam similique! Eius tempora doloremque ab reiciendis.</p>
+            <h3>Generado por IA</h3>
+                <div class="wall">
+                    <div class="carousel-container">
+                        <div class="carousel"></div>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel"></div>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel"></div>
+                    </div>
+                </div>
         </div>
 
         <div class="tercero">
-            <h3>recomendaciones</h3>
+            <h3>Recomendaciones</h3>
             <div class="recommendations" id="recommendations"></div>
         </div>
 
-        <!-- Barra de reproducción personalizada -->
+        <!-- Reproductor -->
         <div class="cuarto">
             <div class="music-player">
                 <div class="music-player__song-info">
@@ -40,11 +78,21 @@
 
                 <div class="centro">
                     <div class="controls">
-                        <button class="control-button" id="shuffleButton">🔀</button>
-                        <button class="control-button" id="prevButton">⏮️</button>
-                        <button class="control-button play-pause-button" id="playPauseButton">▶️</button>
-                        <button class="control-button" id="nextButton">⏭️</button>
-                        <button class="control-button" id="repeatButton">🔁</button>
+                        <button class="control-button" id="shuffleButton">
+                            <i class="fas fa-random"></i>
+                        </button>
+                        <button class="control-button" id="prevButton">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <button class="control-button play-pause-button" id="playPauseButton">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="control-button" id="nextButton">
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                        <button class="control-button" id="repeatButton">
+                            <i class="fas fa-redo"></i>
+                        </button>
                     </div>
 
                     <div class="progress-container">
@@ -57,17 +105,21 @@
                 </div>
 
                 <div class="extra-controls">
-                    <button class="extra-button">🔊</button>
+                    <button class="extra-button">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
                     <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
-                    <button onclick="location.href='./player.html'" class="extra-button fullscreen">⛶</button>
+                    <button class="extra-button fullscreen">
+                        <i class="fas fa-expand"></i>
+                    </button>
                 </div>
             </div>
         </div>
-
-        <audio id="audio"></audio>
-    </div> <!-- Cerrando el div `content-wrapper` correctamente -->
+    </div>
 
     <script src="/index.40d366f0.js"></script>
+    <script src="/index.83ef1be7.js"></script>
+    <script src="/index.ecf94c9f.js"></script>
     <script>// modules are defined as an array
 // [ module function, map of requires ]
 //
@@ -212,14 +264,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"lc7YB":[function(require,module,exports,__globalThis) {
+})({"hAmGE":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "af7fcd9b34224ec5";
+module.bundle.HMR_BUNDLE_ID = "5915db7add35e4d4";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -654,7 +706,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"8EldL":[function(require,module,exports,__globalThis) {
+},{}],"0sekl":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _routesJs = require("./js/routes/routes.js");
 var _routesJsDefault = parcelHelpers.interopDefault(_routesJs);
@@ -662,7 +714,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     (0, _routesJsDefault.default).init();
 });
 
-},{"./js/routes/routes.js":"314eW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["lc7YB","8EldL"], "8EldL", "parcelRequire94c2")
+},{"./js/routes/routes.js":"314eW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hAmGE","0sekl"], "0sekl", "parcelRequire94c2")
 
 </script>
 </body>
